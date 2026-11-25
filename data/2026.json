@@ -1,0 +1,541 @@
+{
+  "year": 2026,
+  "lastVerified": "2026-11-05",
+  "notes": "Federal figures for US individuals. Money in US dollars, rates as decimals (0.124 = 12.4%). \"max\": null means no upper limit. Not tax advice.",
+  "filingStatuses": {
+    "single": "Single",
+    "mfj": "Married filing jointly (and qualifying surviving spouse)",
+    "mfs": "Married filing separately",
+    "hoh": "Head of household"
+  },
+  "incomeTaxBrackets": {
+    "description": "Ordinary income tax brackets on taxable income. baseTax is the tax on all income below min, so tax = baseTax + rate × (income − min).",
+    "single": [
+      {
+        "min": 0,
+        "max": 12400,
+        "rate": 0.1,
+        "baseTax": 0
+      },
+      {
+        "min": 12400,
+        "max": 50400,
+        "rate": 0.12,
+        "baseTax": 1240
+      },
+      {
+        "min": 50400,
+        "max": 105700,
+        "rate": 0.22,
+        "baseTax": 5800
+      },
+      {
+        "min": 105700,
+        "max": 201775,
+        "rate": 0.24,
+        "baseTax": 17966
+      },
+      {
+        "min": 201775,
+        "max": 256225,
+        "rate": 0.32,
+        "baseTax": 41024
+      },
+      {
+        "min": 256225,
+        "max": 640600,
+        "rate": 0.35,
+        "baseTax": 58448
+      },
+      {
+        "min": 640600,
+        "max": null,
+        "rate": 0.37,
+        "baseTax": 192979.25
+      }
+    ],
+    "mfj": [
+      {
+        "min": 0,
+        "max": 24800,
+        "rate": 0.1,
+        "baseTax": 0
+      },
+      {
+        "min": 24800,
+        "max": 100800,
+        "rate": 0.12,
+        "baseTax": 2480
+      },
+      {
+        "min": 100800,
+        "max": 211400,
+        "rate": 0.22,
+        "baseTax": 11600
+      },
+      {
+        "min": 211400,
+        "max": 403550,
+        "rate": 0.24,
+        "baseTax": 35932
+      },
+      {
+        "min": 403550,
+        "max": 512450,
+        "rate": 0.32,
+        "baseTax": 82048
+      },
+      {
+        "min": 512450,
+        "max": 768700,
+        "rate": 0.35,
+        "baseTax": 116896
+      },
+      {
+        "min": 768700,
+        "max": null,
+        "rate": 0.37,
+        "baseTax": 206583.5
+      }
+    ],
+    "mfs": [
+      {
+        "min": 0,
+        "max": 12400,
+        "rate": 0.1,
+        "baseTax": 0
+      },
+      {
+        "min": 12400,
+        "max": 50400,
+        "rate": 0.12,
+        "baseTax": 1240
+      },
+      {
+        "min": 50400,
+        "max": 105700,
+        "rate": 0.22,
+        "baseTax": 5800
+      },
+      {
+        "min": 105700,
+        "max": 201775,
+        "rate": 0.24,
+        "baseTax": 17966
+      },
+      {
+        "min": 201775,
+        "max": 256225,
+        "rate": 0.32,
+        "baseTax": 41024
+      },
+      {
+        "min": 256225,
+        "max": 384350,
+        "rate": 0.35,
+        "baseTax": 58448
+      },
+      {
+        "min": 384350,
+        "max": null,
+        "rate": 0.37,
+        "baseTax": 103291.75
+      }
+    ],
+    "hoh": [
+      {
+        "min": 0,
+        "max": 17700,
+        "rate": 0.1,
+        "baseTax": 0
+      },
+      {
+        "min": 17700,
+        "max": 67450,
+        "rate": 0.12,
+        "baseTax": 1770
+      },
+      {
+        "min": 67450,
+        "max": 105700,
+        "rate": 0.22,
+        "baseTax": 7740
+      },
+      {
+        "min": 105700,
+        "max": 201750,
+        "rate": 0.24,
+        "baseTax": 16155
+      },
+      {
+        "min": 201750,
+        "max": 256200,
+        "rate": 0.32,
+        "baseTax": 39207
+      },
+      {
+        "min": 256200,
+        "max": 640600,
+        "rate": 0.35,
+        "baseTax": 56631
+      },
+      {
+        "min": 640600,
+        "max": null,
+        "rate": 0.37,
+        "baseTax": 191171
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rev. Proc. 2025-32 (2026 tax brackets, standard deduction, QBI thresholds)",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      }
+    ]
+  },
+  "standardDeduction": {
+    "single": 16100,
+    "mfj": 32200,
+    "mfs": 16100,
+    "hoh": 24150,
+    "sources": [
+      {
+        "label": "Rev. Proc. 2025-32 (2026 tax brackets, standard deduction, QBI thresholds)",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      }
+    ]
+  },
+  "selfEmploymentTax": {
+    "description": "Schedule SE. Net earnings = net profit × netEarningsFactor. No SE tax when net earnings are under minimumNetEarnings. Social Security stops at the wage base, which W-2 wages use up first; Medicare has no limit. Half the SE tax is an above-the-line deduction.",
+    "netEarningsFactor": 0.9235,
+    "minimumNetEarnings": 400,
+    "socialSecurityRate": 0.124,
+    "socialSecurityWageBase": 184500,
+    "medicareRate": 0.029,
+    "deductiblePortion": 0.5,
+    "sources": [
+      {
+        "label": "IRS: Self-employment tax (Social Security and Medicare)",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+      },
+      {
+        "label": "SSA: 2026 contribution and benefit base ($184,500)",
+        "url": "https://www.ssa.gov/oact/cola/cbb.html"
+      }
+    ]
+  },
+  "additionalMedicareTax": {
+    "description": "Form 8959. 0.9% on wages and self-employment earnings above the threshold. Set by statute, not indexed for inflation.",
+    "rate": 0.009,
+    "threshold": {
+      "single": 200000,
+      "hoh": 200000,
+      "mfj": 250000,
+      "mfs": 125000
+    },
+    "sources": [
+      {
+        "label": "IRS: Additional Medicare Tax Q&A",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/questions-and-answers-for-the-additional-medicare-tax"
+      }
+    ]
+  },
+  "qbiDeduction": {
+    "description": "Section 199A qualified business income deduction. Above the threshold the W-2 wage and property limit and the specified service rules phase in over phaseInRange. minimumDeduction applies when QBI from an active business is at least minimumQualifiedIncome.",
+    "rate": 0.2,
+    "threshold": {
+      "single": 201750,
+      "hoh": 201750,
+      "mfj": 403500,
+      "mfs": 201775
+    },
+    "phaseInRange": {
+      "single": 75000,
+      "hoh": 75000,
+      "mfj": 150000,
+      "mfs": 75000
+    },
+    "wageLimitRate": 0.5,
+    "wagePropertyRate": 0.25,
+    "ubiaRate": 0.025,
+    "minimumDeduction": 400,
+    "minimumQualifiedIncome": 1000,
+    "sources": [
+      {
+        "label": "Rev. Proc. 2025-32 (2026 tax brackets, standard deduction, QBI thresholds)",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      },
+      {
+        "label": "IRC section 199A (QBI deduction, incl. $400 minimum)",
+        "url": "https://www.law.cornell.edu/uscode/text/26/199A"
+      },
+      {
+        "label": "Instructions for Form 8995-A: Qualified Business Income Deduction",
+        "url": "https://www.irs.gov/instructions/i8995a"
+      }
+    ]
+  },
+  "qualifiedTipsDeduction": {
+    "description": "Section 224 deduction for qualified tips (tax years 2025 to 2028, not indexed). Reduced by reductionPerThousand for each whole $1,000 of MAGI over phaseOutStart. Married people must file jointly to claim it.",
+    "maxDeduction": 25000,
+    "phaseOutStart": {
+      "single": 150000,
+      "hoh": 150000,
+      "mfj": 300000
+    },
+    "reductionPerThousand": 100,
+    "sources": [
+      {
+        "label": "T.D. 10044: Occupations That Customarily and Regularly Received Tips (final regulations, Apr 13, 2026)",
+        "url": "https://www.govinfo.gov/content/pkg/FR-2026-04-13/pdf/2026-07104.pdf"
+      },
+      {
+        "label": "Schedule 1-A (Form 1040): Additional Deductions",
+        "url": "https://www.irs.gov/pub/irs-pdf/f1040s1a.pdf"
+      }
+    ]
+  },
+  "estimatedTax": {
+    "description": "Quarterly estimated tax for the year's income. Safe harbor: pay the smaller of currentYearPercent of this year's tax or priorYearPercent of last year's (priorYearHighIncomePercent when last year's AGI was over priorYearHighIncomeAgi). No penalty when less than noPenaltyBelow is owed after withholding.",
+    "dueDates": [
+      "2026-04-15",
+      "2026-06-15",
+      "2026-09-15",
+      "2027-01-15"
+    ],
+    "provisional": false,
+    "currentYearPercent": 0.9,
+    "priorYearPercent": 1,
+    "priorYearHighIncomePercent": 1.1,
+    "priorYearHighIncomeAgi": {
+      "single": 150000,
+      "mfj": 150000,
+      "hoh": 150000,
+      "mfs": 75000
+    },
+    "noPenaltyBelow": 1000,
+    "januaryExceptionFileBy": "2027-02-01",
+    "returnDueDate": "2027-04-15",
+    "sources": [
+      {
+        "label": "IRS Form 1040-ES (2026) estimated tax",
+        "url": "https://www.irs.gov/pub/irs-pdf/f1040es.pdf"
+      },
+      {
+        "label": "IRS Publication 505 (2026): Tax Withholding and Estimated Tax",
+        "url": "https://www.irs.gov/publications/p505"
+      },
+      {
+        "label": "26 U.S.C. 6654(d), (e) and (g): required annual payment, the $1,000 rule, withholding treated as paid evenly",
+        "url": "https://www.law.cornell.edu/uscode/text/26/6654"
+      }
+    ]
+  },
+  "informationReturns": {
+    "description": "Reporting thresholds for payments made during the calendar year. Form 1099-NEC: payments for services to a non-employee in the course of a trade or business. Form 1099-K: sent by payment apps and card processors.",
+    "form1099NEC": {
+      "threshold": 2000,
+      "dueDate": "2027-02-01"
+    },
+    "form1099K": {
+      "grossPaymentsOver": 20000,
+      "transactionsOver": 200
+    },
+    "sources": [
+      {
+        "label": "IRS: Instructions for Forms 1099-MISC and 1099-NEC (Rev. December 2026)",
+        "url": "https://www.irs.gov/instructions/i1099mec"
+      },
+      {
+        "label": "IRS: Understanding your Form 1099-K",
+        "url": "https://www.irs.gov/businesses/understanding-your-form-1099-k"
+      }
+    ]
+  },
+  "businessMileageRates": {
+    "description": "IRS standard mileage rate for business use of a car, per mile.",
+    "periods": [
+      {
+        "from": "2026-01-01",
+        "to": "2026-06-30",
+        "rate": 0.725,
+        "source": "Notice 2026-10"
+      },
+      {
+        "from": "2026-07-01",
+        "to": "2026-12-31",
+        "rate": 0.76,
+        "source": "Announcement 2026-11"
+      }
+    ],
+    "sources": [
+      {
+        "label": "IRS standard mileage rates",
+        "url": "https://www.irs.gov/tax-professionals/standard-mileage-rates"
+      },
+      {
+        "label": "Announcement 2026-11 (76¢ from July 1, 2026), Internal Revenue Bulletin 2026-29",
+        "url": "https://www.irs.gov/irb/2026-29_irb"
+      }
+    ]
+  },
+  "retirement": {
+    "description": "Solo 401(k) and SEP-IRA limits. The employer contribution is up to employerRate of compensation (for the self-employed, about 20% of net earnings after half the SE tax).",
+    "electiveDeferralLimit": 24500,
+    "catchUpLimit": 8000,
+    "catchUpLimitAge60To63": 11250,
+    "definedContributionLimit": 72000,
+    "compensationLimit": 360000,
+    "employerRate": 0.25,
+    "sources": [
+      {
+        "label": "Notice 2025-67 (2026 retirement plan limits)",
+        "url": "https://www.irs.gov/pub/irs-drop/n-25-67.pdf"
+      },
+      {
+        "label": "IRS Publication 560: Retirement Plans for Small Business",
+        "url": "https://www.irs.gov/publications/p560"
+      }
+    ]
+  },
+  "homeOffice": {
+    "description": "Simplified method: simplifiedRate per square foot, up to simplifiedMaxSquareFeet. Regular method depreciation: 39-year nonresidential real property rates (Form 8829 line 41).",
+    "simplifiedRate": 5,
+    "simplifiedMaxSquareFeet": 300,
+    "depreciationFullYearRate": 0.02564,
+    "depreciationFirstYearRateByMonth": [
+      0.02461,
+      0.02247,
+      0.02033,
+      0.01819,
+      0.01605,
+      0.01391,
+      0.01177,
+      0.00963,
+      0.00749,
+      0.00535,
+      0.00321,
+      0.00107
+    ],
+    "sources": [
+      {
+        "label": "Rev. Proc. 2013-13 (simplified method)",
+        "url": "https://www.irs.gov/pub/irs-drop/rp-13-13.pdf"
+      },
+      {
+        "label": "Instructions for Form 8829",
+        "url": "https://www.irs.gov/instructions/i8829"
+      }
+    ]
+  },
+  "longTermCarePremiumLimits": {
+    "description": "Most of a qualified long-term care premium that counts toward the self-employed health insurance deduction, by age at the end of the year.",
+    "byAge": [
+      {
+        "maxAge": 40,
+        "limit": 500
+      },
+      {
+        "maxAge": 50,
+        "limit": 930
+      },
+      {
+        "maxAge": 60,
+        "limit": 1860
+      },
+      {
+        "maxAge": 70,
+        "limit": 4960
+      },
+      {
+        "maxAge": null,
+        "limit": 6200
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rev. Proc. 2025-32 (2026 tax brackets, standard deduction, QBI thresholds)",
+        "url": "https://www.irs.gov/irb/2025-45_IRB"
+      }
+    ]
+  },
+  "premiumTaxCredit": {
+    "description": "Applicable percentage table (expected contribution as a share of household income, by income as a percent of the federal poverty line). Straight line between initial and final within each band. No credit above maxPovertyPercent. Poverty guidelines are from guidelineYear.",
+    "maxPovertyPercent": 400,
+    "applicablePercentages": [
+      {
+        "from": 0,
+        "to": 133,
+        "initial": 0.021,
+        "final": 0.021
+      },
+      {
+        "from": 133,
+        "to": 150,
+        "initial": 0.0314,
+        "final": 0.0419
+      },
+      {
+        "from": 150,
+        "to": 200,
+        "initial": 0.0419,
+        "final": 0.066
+      },
+      {
+        "from": 200,
+        "to": 250,
+        "initial": 0.066,
+        "final": 0.0844
+      },
+      {
+        "from": 250,
+        "to": 300,
+        "initial": 0.0844,
+        "final": 0.0996
+      },
+      {
+        "from": 300,
+        "to": 400,
+        "initial": 0.0996,
+        "final": 0.0996
+      }
+    ],
+    "guidelineYear": 2025,
+    "povertyGuidelines": {
+      "contiguous": {
+        "first": 15650,
+        "additional": 5500
+      },
+      "alaska": {
+        "first": 19550,
+        "additional": 6880
+      },
+      "hawaii": {
+        "first": 17990,
+        "additional": 6330
+      }
+    },
+    "sources": [
+      {
+        "label": "Rev. Proc. 2025-25 (2026 premium tax credit percentages)",
+        "url": "https://www.irs.gov/pub/irs-drop/rp-25-25.pdf"
+      },
+      {
+        "label": "HHS: 2025 poverty guidelines",
+        "url": "https://aspe.hhs.gov/sites/default/files/documents/dd73d4f00d8a819d10b2fdb70d254f7b/detailed-guidelines-2025.pdf"
+      }
+    ]
+  },
+  "unemploymentTax": {
+    "description": "FUTA for employers: futaRate on the first futaWageBase of each employee's wages, less a credit of up to futaMaxCredit for state unemployment tax paid.",
+    "futaRate": 0.06,
+    "futaMaxCredit": 0.054,
+    "futaWageBase": 7000,
+    "sources": [
+      {
+        "label": "IRS Publication 15 (2026): Employer's Tax Guide",
+        "url": "https://www.irs.gov/publications/p15"
+      }
+    ]
+  }
+}

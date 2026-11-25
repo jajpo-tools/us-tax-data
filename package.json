@@ -1,0 +1,43 @@
+{
+  "name": "us-tax-data",
+  "version": "1.0.0",
+  "description": "US federal tax figures for 2026 and 2027 as JSON: tax brackets, standard deduction, self-employment tax, QBI, 1099 thresholds, estimated tax dates and retirement limits, each with its IRS source.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "data/",
+    "csv/"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "tax",
+    "tax-brackets",
+    "irs",
+    "us-tax",
+    "federal-tax",
+    "self-employment-tax",
+    "1099",
+    "standard-deduction",
+    "qbi",
+    "estimated-tax",
+    "json",
+    "open-data",
+    "2026",
+    "2027"
+  ],
+  "homepage": "https://github.com/jajpo-tools/us-tax-data#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jajpo-tools/us-tax-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jajpo-tools/us-tax-data/issues"
+  },
+  "author": "JAJPO (https://jajpo.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
