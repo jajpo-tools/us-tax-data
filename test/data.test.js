@@ -148,4 +148,5 @@ test('underpayment rates: quarters in order, rates as decimals', () => {
   for (let i = 1; i < q.length; i++) assert.ok(q[i].quarter > q[i - 1].quarter);
   for (const r of q) assert.ok(r.rate > 0 && r.rate < 0.2);
   assert.equal(q.find((r) => r.quarter === '2026-Q4').rate, 0.07);
+  assert.equal(q.find((r) => r.quarter === '2027-Q1').rate, 0.08); // IR-2026-144
 });

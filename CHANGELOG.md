@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 (26 Nov 2026)
+
+- IRS underpayment interest rate for January to March 2027: 8%, up from 7% (IRS news release IR-2026-144, November 24, 2026; Rev. Rul. 2026-25, IRB 2026-51).
+
 ## 1.0.0 (2026)
 
 - First release: tax years 2026 and 2027.

@@ -1,6 +1,6 @@
 {
   "name": "us-tax-data",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "US federal tax figures for 2026 and 2027 as JSON: tax brackets, standard deduction, self-employment tax, QBI, 1099 thresholds, estimated tax dates and retirement limits, each with its IRS source.",
   "main": "index.js",
   "files": [
